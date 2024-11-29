@@ -23,7 +23,7 @@ public class SelenideOpenSoftAssertionsTest {
         $("#wiki-tab").click();
 // Input text
         $("#wiki-pages-filter").setValue("SoftAssertions");
-// Make sure there is a SoftAssertions page in the pages list
+// Make sure there is a SoftAssertions have in search
         $(".filterable-active").shouldHave(text("SoftAssertions"));
 // Open SoftAssertions
         $(".filterable-active").$(byText("SoftAssertions")).click();
