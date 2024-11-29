@@ -17,11 +17,17 @@ public class SelenideOpenSoftAssertionsTest {
 
     @Test
     void openSoftAssertionsTest() {
+// Open GitHub
         open("/selenide/selenide");
+// Click on wiki
         $("#wiki-tab").click();
-        $("input#wiki-pages-filter").setValue("SoftAssertions");
+// Input text
+        $("#wiki-pages-filter").setValue("SoftAssertions");
+// Make sure there is a SoftAssertions page in the pages list
         $(".filterable-active").shouldHave(text("SoftAssertions"));
+// Open SoftAssertions
         $(".filterable-active").$(byText("SoftAssertions")).click();
+// Checking for JUnit 5 code
         $$(".markdown-heading .heading-element")
                 .findBy(text("3. Using JUnit5 extend test class:"))
                 .parent()
